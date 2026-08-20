@@ -49,6 +49,14 @@ def run_bot():
     in_position = False
     buy_cost = 0.0
 
+    #Para ver si esta actualizando el reporte
+    reporter.log_trade(
+                        tipo="COMPRA",
+                        moneda=SYMBOL,
+                        cantidad=20,
+                        valor_usd=20,
+                        pnl=0.0
+                    )
     while True:
         try:
             df = get_market_data(SYMBOL, TIMEFRAME)

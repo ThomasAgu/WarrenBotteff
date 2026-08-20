@@ -1,3 +1,5 @@
+version: '3.8'
+    
 services:
   trading-bot:
     build: .
@@ -6,3 +8,5 @@ services:
     network_mode: "host"
     env_file:
       - .env
+    volumes:
+      - ./reports:/app/reports
