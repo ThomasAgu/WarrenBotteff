@@ -34,9 +34,11 @@ SYMBOL=SOL/USDT
 # Candle timeframe
 TIMEFRAME=1h
 
-# Starting amount in USDT
-# Only used in the practice/test environment.
-AMOUNT_USDT=50
+# Capital used to evaluate the strategy (not necessarily the exchange balance).
+INITIAL_CAPITAL_USDT=1000
+
+# Amount attempted for each operation.
+POSITION_SIZE_USDT=50
 ```
 
 ### Configuration
@@ -48,7 +50,8 @@ AMOUNT_USDT=50
 | `USE_TESTNET`        | Whether to use Binance Testnet instead of production | `true`                 |
 | `SYMBOL`             | Trading pair                                         | `SOL/USDT`             |
 | `TIMEFRAME`          | Trading/candle timeframe                             | `1h`                   |
-| `AMOUNT_USDT`        | Starting amount for the bot                          | `50`                   |
+| `INITIAL_CAPITAL_USDT` | Starting capital for strategy evaluation             | `1000`                 |
+| `POSITION_SIZE_USDT`   | Amount attempted per operation                       | `50`                   |
 
 > **Note:** The `TIMEFRAME` configuration is currently set to `1h`, but this will probably become configurable in the future.
 
